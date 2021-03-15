@@ -1,0 +1,19 @@
+name: Scan Container Images
+
+on: [push, pull_request]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up chart-testing
+        uses: redhatrises/container-image-scan-action@v0.1.1
+        with:
+          #          falcon_client_id: "123487srq9871453987"
+          container_repository: docker.io/library/busybox
+        env:
+          FALCON_CLIENT_ID: "123413241341342"
+          FALCON_CLIENT_SECRET: "${{ secrets.FALCON_CLIENT_SECRET }}"
