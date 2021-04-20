@@ -13,7 +13,7 @@ jobs:
         uses: crowdstrike/container-image-scan-action@v0.3
         with:
           container_repository: ubuntu
-          container_tag: focal-20200115
+          container_tag: latest
         env:
           FALCON_CLIENT_ID: "${{ secrets.FALCON_CLIENT_ID }}"
           FALCON_CLIENT_SECRET: "${{ secrets.FALCON_CLIENT_SECRET }}"
