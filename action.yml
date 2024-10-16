@@ -1,4 +1,4 @@
-name: "CrowdStrike Container Image Scan"
+name: "test Container Image Scan"
 description: "Scan your container image for vulnerabilities and malware"
 author: "The CrowdStrike Community"
 branding:
