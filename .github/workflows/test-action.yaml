@@ -1,0 +1,19 @@
+name: Scan Container Images
+
+on:
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: CrowdStrike Container Image Scan
+        uses: redhatrises/container-image-scan-action@main
+        with:
+          container_repository: docker.io/library/busybox
+        env:
+          FALCON_CLIENT_ID: "FAKE_SECRETS"
+          FALCON_CLIENT_SECRET: "FAKE_SECRETS"
