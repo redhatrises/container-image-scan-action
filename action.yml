@@ -1,6 +1,6 @@
-name: "test Container Image Scan"
+name: "test csia scan"
 description: "Scan your container image for vulnerabilities and malware"
-author: "The CrowdStrike Community"
+author: "The Community"
 branding:
   color: red
   icon: shield
